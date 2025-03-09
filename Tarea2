@@ -1,0 +1,11 @@
+def two_sum(nums, target):
+    # Recorrer el arreglo con dos índices
+    for i in range(len(nums)):  # Primer número
+        for j in range(i + 1, len(nums)):  # Segundo número (sin repetir el mismo índice)
+            if nums[i] + nums[j] == target:  # Verificar si la suma es igual al target
+                return [i, j]  # Devolver los índices encontrados
+
+# Ejemplos de uso
+print(two_sum([2, 7, 11, 15], 9))  # Salida: [0, 1]
+print(two_sum([3, 2, 4], 6))       # Salida: [1, 2]
+print(two_sum([3, 3], 6))          # Salida: [0, 1]
